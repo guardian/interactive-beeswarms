@@ -1,0 +1,63 @@
+@import "mq";
+@import "fonts";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+$partyColours: (
+	con:     #005789,
+	speaker: #005789,
+	green:   #33a22b,
+	lab:     #e31f26,
+	labco-op: #e31f26,
+	snp:     #fcdd03,
+	libdem:  #ffb900,
+	ukip:    #7d0069,
+	pc:      #868686,
+	others:  #b3b3b4,
+	uup:     #b3b3b4,
+	dup:     #99002e,
+	sf:      #7eaa58,
+	sdlp:    #008587,
+	alliance: #f2d303,
+	ind:     #b3b3b4
+);
+
+.bee {
+
+	@each $party, $colour in $partyColours {
+		&.bee--#{$party}{
+			fill: $colour;
+			fill-opacity: 0.75;
+			stroke: $colour;
+			stroke-width: 1;
+			stroke-opacity: 0.9;
+		}
+	}
+}
+
+.bs-svg {
+	margin-left: 7.5px;
+	margin-bottom: 16px;
+}
+
+.bs-axis {
+	fill: none;
+	stroke: #999;
+	stroke-width: 1;
+}
+
+.bs-stop {
+	fill: none;
+	stroke: #333;
+	stroke-dasharray: 1,1;
+	stroke-width: 1;
+}
